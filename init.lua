@@ -26,7 +26,7 @@ function technic.register_cobbleCentrifuge(data)
 end
 
 minetest.register_craft({
-	output = "technic:hv_ccentrifuge",
+	output = "technic_recycler:hv_ccentrifuge",
 	recipe = {
 		{"technic:motor",          "technic:composite_plate",   "technic:motor"},
 		{"technic:carbon_plate",   "technic:machine_casing", "technic:copper_plate"      },
