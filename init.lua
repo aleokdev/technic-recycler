@@ -1,5 +1,10 @@
 local S = technic.getter
 
+technic.register_recipe_type("advseparating", {
+	description = S("Separating"),
+	output_size = 4,
+})
+
 function technic.register_advseparating_recipe(data)
 	data.time = data.time or 10
 	technic.register_recipe("advseparating", data)
