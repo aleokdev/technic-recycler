@@ -2,6 +2,10 @@ local S = technic.getter
 
 local fs_helpers = pipeworks.fs_helpers
 
+local function round(v)
+	return math.floor(v + 0.5)
+end
+
 function register_base_machine(data)
 	local typename = data.typename
 	local input_size = technic.recipes[typename].input_size
