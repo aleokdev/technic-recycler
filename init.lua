@@ -1,5 +1,7 @@
 local S = technic.getter
 
+local fs_helpers = pipeworks.fs_helpers
+
 function register_base_machine(data)
 	local typename = data.typename
 	local input_size = technic.recipes[typename].input_size
