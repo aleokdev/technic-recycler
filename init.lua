@@ -250,7 +250,7 @@ function technic.register_advseparating_recipe(data)
 end
 
 local recipes = {
-	{ "minetest:cobblestone 1",             "technic_recycler:smallpileofcopper",       "technic_recycler:smallpileofiron",  "technic_recycler:tinypileofgold",  "technic_recycler:tinypileofaluminium"    },
+	{ "default:cobble",             "technic_recycler:smallpileofcopper",       "technic_recycler:smallpileofiron",  "technic_recycler:tinypileofgold",  "technic_recycler:tinypileofaluminium"    },
 }
 
 for _, data in pairs(recipes) do
