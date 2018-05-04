@@ -5,6 +5,14 @@ function technic.register_advseparating_recipe(data)
 	technic.register_recipe("advseparating", data)
 end
 
+local recipes = {
+	{ "minetest:cobblestone 1",             "technic_recycler:smallpileofcopper",       "technic_recycler:smallpileofiron",  "technic_recycler:tinypileofgold",  "technic_recycler:tinypileofaluminium"    },
+}
+
+for _, data in pairs(recipes) do
+	technic.register_advseparating_recipe({ input = { data[1] }, output = { data[2], data[3], data[4], data[5] } })
+end
+
 function technic.register_cobbleCentrifuge(data)
 	data.typename = "advseparating"
 	data.machine_name = "advanced centrifuge"
@@ -77,10 +85,4 @@ minetest.register_craftitem("technic_recycler:aluminium_plate", {
 	inventory_image = "aluminiumplate.png",
 })
 
-local recipes = {
-	{ "minetest:cobblestone 1",             "technic_recycler:smallpileofcopper",       "technic_recycler:smallpileofiron",  "technic_recycler:tinypileofgold",  "technic_recycler:tinypileofaluminium"    },
-}
 
-for _, data in pairs(recipes) do
-	technic.register_advseparating_recipe({ input = { data[1] }, output = { data[2], data[3], data[4], data[5] } })
-end
