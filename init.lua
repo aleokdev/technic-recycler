@@ -1,5 +1,10 @@
 local S = technic.getter
 
+function technic.register_advseparating_recipe(data)
+	data.time = data.time or 10
+	technic.register_recipe("advseparating", data)
+end
+
 function technic.register_cobbleCentrifuge(data)
 	data.typename = "advseparating"
 	data.machine_name = "advanced centrifuge"
@@ -75,11 +80,6 @@ minetest.register_craftitem("technic_recycler:aluminium_plate", {
 local recipes = {
 	{ "minetest:cobblestone 1",             "technic_recycler:smallpileofcopper",       "technic_recycler:smallpileofiron",  "technic_recycler:tinypileofgold",  "technic_recycler:tinypileofaluminium"    },
 }
-
-function technic.register_advseparating_recipe(data)
-	data.time = data.time or 10
-	technic.register_recipe("advseparating", data)
-end
 
 for _, data in pairs(recipes) do
 	technic.register_advseparating_recipe({ input = { data[1] }, output = { data[2], data[3], data[4], data[5] } })
