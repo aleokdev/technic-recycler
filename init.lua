@@ -344,10 +344,10 @@ local compressorRecipes = {
 	{"technic_recycler:tinypileofaluminium 99", "technic_recycler:smallpileofaluminium"},
 	{"technic_recycler:smallpileofaluminium 99", "technic_recycler:pileofaluminium"},
 	{"technic_recycler:pileofaluminium 15", "technic_recycler:aluminium_plate"},
-	{"technic_recycler:smallpileofcopper 99", "technic_recycler:pileofcopper"}
-	{"technic_recycler:pileofcopper 99", "technic:copper_dust"}
-	{"technic_recycler:smallpileofiron 99", "technic_recycler:pileofiron"}
-	{"technic_recycler:pileofiron 99", "technic:iron_dust"}
+	{"technic_recycler:smallpileofcopper 99", "technic_recycler:pileofcopper"},
+	{"technic_recycler:pileofcopper 99", "technic:copper_dust"},
+	{"technic_recycler:smallpileofiron 99", "technic_recycler:pileofiron"},
+	{"technic_recycler:pileofiron 99", "technic:iron_dust"},
 }
 
 for _, data in pairs(recipes) do
