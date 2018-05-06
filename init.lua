@@ -335,6 +335,24 @@ minetest.register_craftitem("technic_recycler:aluminium_plate", {
 	inventory_image = "aluminiumplate.png",
 })
 
+minetest.register_node("technic_recycler:aluminium_casing", {
+	description = S("Aluminium Casing"),
+	groups = {cracky=3},
+	sunlight_propagates = false,
+	drawtype = "allfaces",
+	tiles = {"aluminiumcasing.png"},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "technic_recycler:aluminium_casing",
+	recipe = {
+		{"technic_recycler:aluminium_plate", "technic_recycler:aluminium_plate",   "technic_recycler:aluminium_plate"},
+		{"technic_recycler:aluminium_plate",   "technic:machine_casing", "technic_recycler:aluminium_plate"      },
+		{"technic_recycler:aluminium_plate", "technic_recycler:aluminium_plate",       "technic_recycler:aluminium_plate"     },
+	}
+})
+
 -- Recipes
 
 local compressorRecipes = {
