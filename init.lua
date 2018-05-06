@@ -269,10 +269,10 @@ function technic.register_cobbleCentrifuge(data)
 end
 
 minetest.register_craft({
-	output = "technic_recycler:hv_ccentrifuge",
+	output = "technic_recycler:hv_advanced_centrifuge",
 	recipe = {
 		{"technic:motor",          "technic:composite_plate",   "technic:motor"},
-		{"technic:carbon_plate",   "technic:machine_casing", "technic:copper_plate"      },
+		{"technic:carbon_plate",   "technic:mv_centrifuge", "technic:copper_plate"      },
 		{"pipeworks:one_way_tube", "technic:hv_cable",       "pipeworks:mese_filter"     },
 	}
 })
@@ -350,6 +350,9 @@ local compressorRecipes = {
 	{"technic_recycler:pileofiron 99", "technic:iron_dust"},
 }
 
-for _, data in pairs(recipes) do
+for _, data in pairs(compressorRecipes) do
 	technic.register_compressor_recipe({input = {data[1]}, output = data[2]})
 end
+
+-- Aluminium recipes
+
