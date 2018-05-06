@@ -285,6 +285,8 @@ technic.register_cobbleCentrifuge({
 	tube = 1,
 })
 
+-- Register Items
+
 minetest.register_craftitem("technic_recycler:tinypileofgold", {
 	description = S("A Few Miligrams Of Gold"),
 	inventory_image = "goldsmol.png",
@@ -332,3 +334,22 @@ minetest.register_craftitem("technic_recycler:aluminium_plate", {
 	description = S("Aluminium Plate"),
 	inventory_image = "aluminiumplate.png",
 })
+
+-- Recipes
+
+local compressorRecipes = {
+	{"technic_recycler:tinypileofgold 99", "technic_recycler:smallpileofgold"},
+	{"technic_recycler:smallpileofgold 99", "technic_recycler:pileofgold"},
+	{"technic_recycler:pileofgold 10", "technic:gold_dust"},
+	{"technic_recycler:tinypileofaluminium 99", "technic_recycler:smallpileofaluminium"},
+	{"technic_recycler:smallpileofaluminium 99", "technic_recycler:pileofaluminium"},
+	{"technic_recycler:pileofaluminium 15", "technic_recycler:aluminium_plate"},
+	{"technic_recycler:smallpileofcopper 99", "technic_recycler:pileofcopper"}
+	{"technic_recycler:pileofcopper 99", "technic:copper_dust"}
+	{"technic_recycler:smallpileofiron 99", "technic_recycler:pileofiron"}
+	{"technic_recycler:pileofiron 99", "technic:iron_dust"}
+}
+
+for _, data in pairs(recipes) do
+	technic.register_compressor_recipe({input = {data[1]}, output = data[2]})
+end
